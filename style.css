@@ -1,0 +1,142 @@
+/*cai dat font chu cho google */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    /*thuộc tính width và height sẽ tự động bao gồm luôn content*/
+    box-sizing: border-box;
+    text-decoration: none;
+   
+}
+
+/*Navigation Menu CSS*/
+
+nav{
+    position: fixed;
+    width: 100%;
+    padding: 20px 0;
+    font-family:'Roboto',sans-serif;
+    
+   
+}
+nav .navbar{
+    width: 90%;
+    margin: auto;
+    /*Thuộc tính display xác định loại hiển thị của thành phần.*/
+    display: flex;
+    /*Thuộc tính align-items sử dụng để điều chỉnh vị trí bắt đầu và 
+    căn chỉnh các item bên trong container theo dọc theo trục cross 
+    axis, chiều ngang hoặc chiều dọc tùy thuộc vào flex-direction*/
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+nav .navbar .logo a {
+
+    font-size:40px;
+    font-size: 500;
+    color:blueviolet;
+}
+
+nav .navbar .menu{
+
+    display: flex;
+}
+
+nav .navbar .menu li
+{
+    margin: 8px;
+    list-style: none;
+    
+}
+
+.navbar .menu li 
+{
+    font-size: 18px;
+    font-size: 500;
+    color: rgb(226, 43, 58);
+}
+
+.navbar .media-icons a
+{
+    font-size: 18px;
+    margin: 6px;
+    color: rgb(19, 226, 105);
+}
+/*Side Navigation Menu Button CSS*/
+nav .menu-btn, 
+.navbar .cancel-btn{
+    position:absolute;
+    color: #fff;
+    font-size: 20px;
+    right: 20px;
+    top: 20px;
+
+}
+
+nav .menu-btn{
+    color: #4070f4;
+}
+
+/*Home section CSS*/
+.home{
+    height: 100vh;
+    width: 100%;
+    background: url("D:/HINH_NEN/hinh-nen-4k-cho-laptop-desktop-cuc-dep/Wallpaper 4k - Hình nền 4k hình ảnh về vũ trụ cực đẹp.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.home .home-content
+{
+    height: 100%;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Responsive Media Query CSS*/
+/*Responsive là một tính từ để chỉ một website có thể hiển thị tương thích
+ trên mọi kích thước hiển thị của trình duyệt*/
+@media(max-width:750px)
+{
+    nav .navbar{
+        width: 90%;
+    }
+    nav .navbar .menu{
+        /*Giá trị này dùng để thiết lập vị trí của một phần tử theo phần tử
+         cha có giá trị thuộc tính position là relative hoặc absolute*/
+        position:absolute;
+        left: -100%;
+        top: 0;
+        height: 100vh;
+        max-width: 400px;
+        width: 100%;
+        background-color: bisque;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 60px;
+        /*Tạo hiệu ứng thanh menu*/
+        transition: all 0.5s ease;
+    }
+    
+    .navbar.active .menu{
+        left : 0;
+    }
+    
+    nav .menu li a{
+        display: block;
+        margin: 10px 0;
+        font-size: 23px;
+        color: rgb(0, 47, 255);
+    }
+
+    nav .media-icons a{
+        display: none;
+    }
+
+}
+
